@@ -21,7 +21,7 @@ export default function FoodList() {
       );
     });
 
-    return <div>{rtnList}</div>;
+    return <div className="grid gap-4 grid-cols-6 grid-rows-5">{rtnList}</div>;
   }
 
   return (
