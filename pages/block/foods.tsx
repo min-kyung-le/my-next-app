@@ -19,7 +19,7 @@ export default function FoodList() {
   }
 
   function TestFoodList() {
-    const imgNum = Array.from({ length: 1 }, (v, i) => i + 1);
+    const imgNum = Array.from({ length: 10 }, (v, i) => i + 1);
     const rtnList = imgNum.map((one, idx) => {
       return (
         <TestFood
@@ -30,11 +30,7 @@ export default function FoodList() {
       );
     });
 
-    return (
-      <div className={styles.foodcontainer}>
-        <div className={styles.fooddiv}>{rtnList}</div>
-      </div>
-    );
+    return <div className={styles.fooddiv}>{rtnList}</div>;
   }
 
   return (

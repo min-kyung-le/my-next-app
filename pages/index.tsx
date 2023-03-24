@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import FoodList from "./block/foods";
 import InfoText from "./block/infoText";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,7 +15,7 @@ type menuType = {
 };
 
 export default function Home() {
-  const menus = ["전체", "한식", "일식", "중식", "양식", "건의사항"];
+  const menus = ["개발자", "레퍼런스", "건의사항"];
 
   function MenuItem(props: menuType) {
     return <span className={styles.menuname}>{props.menuname}</span>;

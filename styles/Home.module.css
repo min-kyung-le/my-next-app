@@ -37,7 +37,9 @@
 }
 
 .foodcontainer {
-  overflow: hidden;
+  display: none;
+  opacity: 0;
+  transform: translateX(80%);
 }
 
 .fooddiv {
