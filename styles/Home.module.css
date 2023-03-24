@@ -4,6 +4,52 @@
   min-height: 100vh;
 }
 
+.mainin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.infodiv {
+  margin: 20px;
+  width: 420px;
+  height: 600px;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: blueviolet;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transform: rotate(-5deg);
+}
+
+.infotext {
+  font-size: 45px;
+}
+
+.menulist {
+  padding: 18px 0 0 30px;
+}
+
+.menuname {
+  padding-right: 28px;
+}
+
+.foodcontainer {
+  overflow: hidden;
+}
+
+.fooddiv {
+  width: 130vw;
+  height: 130vh;
+}
+
+.myimg {
+  border-radius: 15px;
+  margin: 0 30px 20px 0;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;

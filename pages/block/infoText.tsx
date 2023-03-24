@@ -1,5 +1,23 @@
+import styles from "@/styles/Home.module.css";
+import { gsap } from "gsap";
+import { useRef, useEffect } from "react";
+
 export default function InfoText() {
-  const text =
-    "점심에 뭐 먹을지 고민이 되신다면 여기서 추천해드립니다. 주변 식당이 뭐가 있는지도 모르신다면 여기서 추천해드립니다. 먹는 것까지 고민하지 말자구요.";
-  return <div className="italic">{text}</div>;
+  const text = "뭐 먹지? 고민하지 말고 고르자. 메뉴 추천 받자!";
+
+  const boxRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    gsap.to(boxRef.current, {
+      rotationY: 360,
+      duration: 4,
+      ease: "bounce.out",
+    });
+  });
+
+  return (
+    <div className={styles.infodiv} ref={boxRef}>
+      <div className={styles.infotext}>{text}</div>
+    </div>
+  );
 }

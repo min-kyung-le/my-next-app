@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "@/styles/Home.module.css";
 
 type ImgFoodType = {
   src: string;
@@ -6,11 +7,19 @@ type ImgFoodType = {
 };
 export default function FoodList() {
   function TestFood(props: ImgFoodType) {
-    return <Image src={props.src} alt={props.alt} width={250} height={200} />;
+    return (
+      <Image
+        src={props.src}
+        alt={props.alt}
+        width={270}
+        height={200}
+        className={styles.myimg}
+      />
+    );
   }
 
   function TestFoodList() {
-    const imgNum = Array.from({ length: 25 }, (v, i) => i + 1);
+    const imgNum = Array.from({ length: 1 }, (v, i) => i + 1);
     const rtnList = imgNum.map((one, idx) => {
       return (
         <TestFood
@@ -21,7 +30,11 @@ export default function FoodList() {
       );
     });
 
-    return <div className="grid gap-4 grid-cols-6 grid-rows-5">{rtnList}</div>;
+    return (
+      <div className={styles.foodcontainer}>
+        <div className={styles.fooddiv}>{rtnList}</div>
+      </div>
+    );
   }
 
   return (
