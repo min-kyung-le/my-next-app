@@ -38,6 +38,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <p className="italic font-bold underline">이건 테스트용입니다.</p>
         <MenuList name={menus} />
         <InfoText />
         <FoodList />
