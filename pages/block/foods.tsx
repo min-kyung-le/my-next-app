@@ -19,7 +19,7 @@ export default function FoodList() {
   }
 
   function TestFoodList() {
-    const imgNum = Array.from({ length: 5 }, (v, i) => i + 1);
+    const imgNum = Array.from({ length: 12 }, (v, i) => i + 1);
     const rtnList = imgNum.map((one, idx) => {
       return (
         <TestFood

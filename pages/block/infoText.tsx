@@ -10,7 +10,7 @@ export default function InfoText() {
   const cardRef = useRef<HTMLDivElement>(null);
   const foodRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  function cardAni() {
     //카드 돌리기
     tl.fromTo(
       cardRef.current,
@@ -49,7 +49,7 @@ export default function InfoText() {
       duration: 1,
       ease: "power3.out",
     });
-  }, []);
+  }
 
   return (
     <>
